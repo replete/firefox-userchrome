@@ -1,0 +1,25 @@
+/* @replete's Firefox userChrome
+ * Tabs - Container tabs gradient
+ * https://github.com/replete/firefox-userchrome
+ */
+
+/* Container tab colour (delete if you want the solid color strip back) */
+.tabbrowser-tab .tab-context-line {
+    height: 29px !important; 
+    margin:0 !important;
+    border-radius: 4px !important;
+    background-color: transparent !important;
+    background: radial-gradient(ellipse farthest-side at 15% -75%, var(--identity-icon-color) 0%, transparent 100%);
+    opacity:0.8
+}
+.tabbrowser-tab[pinned=true] .tab-context-line {
+    background: linear-gradient(0deg, transparent 60%, var(--identity-icon-color) 140%)
+}
+
+.tabbrowser-tab[selected=true] .tab-context-line {
+    opacity:1;
+}
+.tabbrowser-tab:hover:not([selected=true]) .tab-context-line {
+    background: radial-gradient(ellipse farthest-side at 50% 0%, var(--identity-icon-color) 0%, transparent 100%);
+    opacity:1;
+}

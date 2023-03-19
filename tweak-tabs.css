@@ -1,0 +1,62 @@
+/* @replete's Firefox userChrome
+ * Tabs tweaks
+ * https://github.com/replete/firefox-userchrome
+ */
+
+
+/* This is designed for dark mode MacOS with browser.uidensity = 1 set in about:config */
+
+/* Line up tabs with urlbar configured with back/next/reload on compact uidensity: */
+.titlebar-spacer[type="pre-tabs"] {
+    width: 21px !important;
+    }
+    
+    /* Moooar tab space at right */
+    .titlebar-spacer[type="post-tabs"] {
+    width: 23px !important;
+    }
+    
+    /* Shorten gap between pinned tabs and normal */
+    #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: 5px !important;
+    }
+
+/* Fixes the gap between tab rows */
+#tabbrowser-tabs .tabbrowser-tab {
+    height:34px !important;
+}
+#TabsToolbar {
+    padding-bottom:4px
+}
+
+/* Fix close button right alignment */
+.tabbrowser-tab .tab-close-button {
+    transform: translate(1px,0) !important;
+    height:23px !important;
+}
+
+/* gap above tabs */
+#tabbrowser-tabs {
+    padding-top:2px !important;
+}
+
+/* alignment fix */
+.tabbrowser-tab[first-visible-tab=true] {
+    padding-left:2px !important
+}
+
+/* alignment fix */
+.tab-label-container .tab-text {
+    transform:translate(0,-1px)
+}
+
+/* Removes the side borders from active and inactive tabs. */
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    border-left: none !important; /* Remove borders from inactive tabs */
+}
+
+/* Show X on hover tab in multiline */
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
+	display: -moz-box !important;
+}

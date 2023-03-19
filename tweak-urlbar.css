@@ -1,0 +1,26 @@
+/* @replete's Firefox userChrome
+ * url bar tweaks
+ * https://github.com/replete/firefox-userchrome
+ */
+
+/* 
+    Use unthemable purple tracking protection icon if page is valid, 
+    because it creates more of a distinction in the messy pre-url icon area.
+    This icon is easily confused with the padlock, and should be made more
+    distinct, ideally with a filled-in icon with identity color.
+*/
+#nav-bar:not([urlbar-exceeds-toolbar-bounds=true]) #urlbar-input-container[pageproxystate="valid"] > #tracking-protection-icon-container:not(:hover) > #tracking-protection-icon-box > #tracking-protection-icon {
+    list-style-image: url(chrome://browser/skin/tracking-protection-active.svg) !important;
+}
+    
+/* Improve urlbar boundary legibility */
+#urlbar-background {
+    border: 1px solid #3C4151 !important;
+}
+
+
+/* Make page urlbar page zoon less ugly */
+#urlbar-zoom-button:not(:hover) {
+    background: transparent !important;
+    color: #bbb !important;
+}
