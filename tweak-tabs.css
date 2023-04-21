@@ -66,13 +66,14 @@
 
 /* Align new tab button */
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon {
-    transform: translate(0,1px)
+    height:26px !important;
+    width:26px !important
 }
 
 /* Compact tabs */
 .tab-content {
-    padding-left:4px !important;
-    padding-right:4px !important;
+    padding-left:5px !important;
+    padding-right:5px !important;
 }
 
 :root[uidensity="compact"] {
