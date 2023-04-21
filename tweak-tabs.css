@@ -60,3 +60,8 @@
 .tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
 	display: -moz-box !important;
 }
+
+/* Align new tab button */
+#TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+    transform: translate(0,1px)
+}

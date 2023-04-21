@@ -1,7 +1,7 @@
 /* 
   replete darkmode compact userChrome.css v0.2
   for modern Firefox-based browsers
-  https://gist.github.com/replete/ba62b8bc9cf61c1e1f8a2ac2eb3907f9
+  https://github.com/replete/firefox-userchrome
 
 */
 
@@ -10,7 +10,7 @@
 @import url(tweak-urlbar.css);
 @import url(compact-toolbar.css);
 @import url(gradient-container-tabs.css);
-/* @import url(multi-row-tabs.css); */
+@import url(multi-row-tabs.css);
 
 
 
