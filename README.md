@@ -18,4 +18,4 @@ clone/fork into `<firefox-profile-folder>/chrome`
 
 ## TODOs
 
-- [ ] Improve multi-row tabs
+- [x] Improve multi-row tabs

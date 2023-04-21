@@ -9,17 +9,17 @@
 /* Line up tabs with urlbar configured with back/next/reload on compact uidensity: */
 .titlebar-spacer[type="pre-tabs"] {
     width: 21px !important;
-    }
+}
     
-    /* Moooar tab space at right */
-    .titlebar-spacer[type="post-tabs"] {
-    width: 23px !important;
-    }
+/* Moooar tab space at right */
+.titlebar-spacer[type="post-tabs"] {
+    width: 13px !important;
+}
     
-    /* Shorten gap between pinned tabs and normal */
-    #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
+/* Shorten gap between pinned tabs and normal */
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab[first-visible-unpinned-tab] {
     margin-inline-start: 5px !important;
-    }
+}
 
 /* Fixes the gap between tab rows */
 #tabbrowser-tabs .tabbrowser-tab {
@@ -32,7 +32,10 @@
 /* Fix close button right alignment */
 .tabbrowser-tab .tab-close-button {
     transform: translate(1px,0) !important;
-    height:23px !important;
+    height:20px !important;
+    margin-inline-end:0px !important;
+    padding:5px !important;
+    width:20px !important;
 }
 
 /* gap above tabs */
@@ -64,4 +67,19 @@
 /* Align new tab button */
 #TabsToolbar .toolbarbutton-1 > .toolbarbutton-icon {
     transform: translate(0,1px)
+}
+
+/* Compact tabs */
+.tab-content {
+    padding-left:4px !important;
+    padding-right:4px !important;
+}
+
+:root[uidensity="compact"] {
+    --tab-min-height:20px;
+    --inline-tab-padding:4px
+}
+
+.tabbrowser-tab {
+    --tab-min-height:20px;
 }
