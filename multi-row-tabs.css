@@ -1,6 +1,8 @@
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/multi-row_tabs.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
+/* Updated on 2024-10-04 to fix multi-row tabs for Firefox 131 */
+
 /* Makes tabs to appear on multiple lines */
 /* Tab reordering will not work and can't be made to work */
 /* You can use multi-row_tabs_window_control_patch.css to move window controls to nav-bar*/
@@ -41,6 +43,11 @@ See the above repository for updates as well as full license text. */
     scrollbar-width: none;
     scrollbar-gutter: stable;
     scroll-snap-type: y mandatory;
+
+		> * {
+			flex-wrap:wrap;
+			/* Fix for Firefox 131 */
+		}
   }
 }
 
